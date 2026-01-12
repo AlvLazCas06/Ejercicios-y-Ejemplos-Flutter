@@ -28,9 +28,14 @@ class LoginPage extends StatelessWidget {
             Column(
               children: [
                 SizedBox(
-                  width: 200,
+                  width: 250,
                   height: 50,
                   child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      )
+                    ),
                     onPressed: () {},
                     child: const Text(
                       'Sign Up',
@@ -47,10 +52,16 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 200,
+                  width: 250,
                   height: 50,
                   child: OutlinedButton(
                     onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      side: const BorderSide(color: Color.fromARGB(255, 246, 149, 133), width: 1),
+                    ),
                     child: const Text(
                       'Log in',
                       style: TextStyle(
