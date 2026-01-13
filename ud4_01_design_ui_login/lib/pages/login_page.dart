@@ -90,15 +90,13 @@ class LoginPage extends StatelessWidget {
                         fontSize: 15,
                       ),
                     ),
-                    SizedBox(width: 4),
                     Text(
-                      'and',
+                      ' and ',
                       style: TextStyle(
                         color: Color.fromARGB(255, 246, 149, 133),
                         fontSize: 15,
                       ),
                     ),
-                    SizedBox(width: 4),
                     Text(
                       'Privacy Policy',
                       style: TextStyle(
