@@ -14,24 +14,26 @@ class PlayStoreApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-        Padding(
-          padding: EdgeInsetsGeometry.all(10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(label1, style: TextStyle(fontSize: 18)),
-              SizedBox(height: 2),
-              Text(lable2, style: TextStyle(fontSize: 14)),
-              SizedBox(height: 1.5),
-              Text(
-                value.toString(),
-                style: TextStyle(
-                  backgroundColor: Color.fromARGB(255, 185, 185, 216),
-                ),
+    return Padding(
+      padding: EdgeInsetsGeometry.all(10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(label1, style: TextStyle(fontSize: 18)),
+          SizedBox(height: 2),
+          Text(lable2, style: TextStyle(fontSize: 14)),
+          SizedBox(height: 1.5),
+          Padding(
+            padding: EdgeInsetsGeometry.all(8),
+            child: Text(
+              value.toString(),
+              style: TextStyle(
+                backgroundColor: Color.fromARGB(255, 185, 185, 216),
               ),
-            ],
+            ),
           ),
-        );
+        ],
+      ),
+    );
   }
 }
