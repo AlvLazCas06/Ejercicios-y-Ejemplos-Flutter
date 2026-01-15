@@ -8,6 +8,15 @@ class TestApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Actores',
+          style: TextStyle(
+            fontFamily: 'AvantGarde',
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       body: ListView(
         scrollDirection: Axis.horizontal,
         children: [
