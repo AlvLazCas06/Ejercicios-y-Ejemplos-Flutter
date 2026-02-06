@@ -16,10 +16,13 @@ enum MovieListType {
 
 class MovieService implements MoviesListInterface {
   final String _apiBaseUrl = "https://api.themoviedb.org/3/movie";
+  final String _apiKey = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZGU2OWE2MTcyNzVkMzE4Y2ZhYjBhZTc1YzM1ZjFkYSIsIm5iZiI6MTc2MzM2NzczMi4wMjMsInN1YiI6IjY5MWFkYjM0MzM5NWM2N2FjZTZkOTI2ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.4KgLCAr0wsEn0FjxLGSAubCsQ05uBGafbW0Nm4kkESA';
 
   @override
   Future<List<Movie>> getList(MovieListType listType) async {
-    var response = await http.get(Uri.parse("$_apiBaseUrl/${listType.value}"));
+    var response = await http.get(Uri.parse("$_apiBaseUrl/${listType.value}"), headers: {
+      'Authorization': 'Bearer $_apiKey'
+    });
     try {
       if (response.statusCode >= 200 && response.statusCode < 300) {
         var moviesList = MovieListPopularResponse.fromJson(
