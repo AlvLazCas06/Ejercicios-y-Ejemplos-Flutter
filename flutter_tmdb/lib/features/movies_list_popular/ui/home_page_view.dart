@@ -28,20 +28,26 @@ class _HomePageViewState extends State<HomePageView> {
         bloc: moviesListPopularBloc,
         builder: (context, state) {
           if (state is MoviesListPopularLoading) {
-            return CircularProgressIndicator();
+            return Center(child: CircularProgressIndicator(),);
           } else if (state is MoviesListPopularSuccess) {
-            return Expanded(
+            return SizedBox(
+              height: 100,
               child: ListView.builder(
                 itemCount: state.movies.length,
                 itemBuilder: (context, index) {
-                  return ListTile(title: Text(state.movies[index].title));
+                  return SizedBox(
+                    width: 200,
+                    height: 200,
+                    child: Text(state.movies[index].title),
+                  );
                 },
+                scrollDirection: Axis.horizontal
               ),
             );
           } else if (state is MoviesListPopularError) {
             return Center(child: Text(state.message));
           }
-          return CircularProgressIndicator();
+          return Center(child: CircularProgressIndicator(),);
         },
       ),
     );
