@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tmdb/features/movies_list_popular/ui/home_page_view.dart';
+import 'package:flutter_tmdb/features/ui/home_page_view.dart';
 
 void main() {
   runApp(const MyApp());
