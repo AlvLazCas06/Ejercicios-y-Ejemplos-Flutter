@@ -43,7 +43,7 @@ class _PeopleListPageState extends State<PeopleListPage> {
                   child: Column(
                     children: [
                       Text(state.peopleList[index].name),
-                      Image.network('https://image.tmdb.org/t/p/w500' + state.peopleList[index].profilePath.toString(), scale: 5,)
+                      Image.network('https://image.tmdb.org/t/p/w500${state.peopleList[index].profilePath}', scale: 5,)
                     ],
                   ),
                 );

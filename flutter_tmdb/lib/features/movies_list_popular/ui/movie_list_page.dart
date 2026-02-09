@@ -38,7 +38,7 @@ class _MovieListPageState extends State<MovieListPage> {
                   child: Column(
                     children: [
                       Text(state.movies[index].title),
-                      Image.network('https://image.tmdb.org/t/p/w500' + state.movies[index].posterPath.toString(), scale: 5,)
+                      Image.network('https://image.tmdb.org/t/p/w500${state.movies[index].posterPath}', scale: 5,)
                     ],
                   ),
                 );
